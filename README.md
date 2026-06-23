@@ -195,5 +195,5 @@ Potential enhancements for future versions include:
 ## License
 
 This project is intended for educational and portfolio purposes. Modify and distribute according to your project's licensing requirements.
-"Screenshots\Screenshot 2026-06-23 120817.png"
+<img src="https://i.ibb.co/tpQf634Y/Screenshot-2026-06-23-120817.png" alt="Screenshot-2026-06-23-120817" border="0">
 
