@@ -1,73 +1,197 @@
-MasterClass Food & Drink Instructors - Vue 3
-Project Overview
-A responsive Vue 3 single-page app that displays a carousel of premium cooking instructors and masterclasses. Users can browse chef profiles, view course details, pricing in South African Rand (ZAR), and save courses to a wishlist. Built with Vue 3 Composition API, <script setup> syntax, and CSS-only animations for the chef name glow effect.
+# MasterClass Food & Drink Instructors - Vue 3
 
-Key Features
+## Project Overview
 
-Interactive instructor cards with hover effects
-Wishlist functionality with live count via HelloWorld component
-ZAR currency formatting using Intl.NumberFormat with en-ZA locale
-Responsive horizontal scroll carousel
-Sold-out state handling with overlay
-CSS spotlight + gradient text animations
-Installation and Run Instructions
-1. Prerequisites
-Make sure you have these installed:
+A responsive Vue 3 single-page application showcasing premium food and drink instructors through an interactive carousel experience. Users can browse chef profiles, explore masterclass details, view pricing in South African Rand (ZAR), and save courses to a wishlist.
 
-Node.js v18 or higher
-npm v9 or higher
-Check your versions:
+The application is built using Vue 3's Composition API with `<script setup>` syntax and includes modern CSS animations such as glowing chef names, spotlight hover effects, and responsive layouts.
 
-bash
+---
+
+## Key Features
+
+* Interactive instructor cards with hover animations
+* Wishlist functionality with real-time course count updates
+* South African Rand (ZAR) currency formatting using `Intl.NumberFormat`
+* Responsive horizontal scrolling carousel
+* Sold-out course state with visual overlay indicators
+* CSS spotlight effects and animated gradient text
+* Modern Vue 3 Composition API architecture
+
+---
+
+## Installation & Setup
+
+### Prerequisites
+
+Ensure the following are installed on your system:
+
+* Node.js v18 or higher
+* npm v9 or higher
+
+Verify your installation:
+
+```bash
 node -v
 npm -v
-2. Install Dependencies
-Clone the repository and install packages:
+```
 
-Bash
-git clone <your-repo-url>
+---
+
+### Install Dependencies
+
+Clone the repository and install the required packages:
+
+```bash
+git clone <your-repository-url>
 cd masterclass-food-instructors
 npm install
-Main dependency: vue@^3.4.0. This project uses Vite as the build tool.
+```
 
-3. Run Development Server
-Start the local dev server with hot-reload:
+**Main Dependency:**
 
-Bash
+```json
+vue@^3.4.0
+```
+
+This project uses **Vite** as the build tool and development server.
+
+---
+
+### Run the Development Server
+
+Start the local development environment with hot module replacement (HMR):
+
+```bash
 npm run dev
-The app will be available at http://localhost:5173
+```
 
-4. Build for Production
-Create an optimized production build in the dist/ folder:
+The application will be available at:
 
-Bash
+```text
+http://localhost:5173
+```
+
+---
+
+### Build for Production
+
+Generate an optimized production build:
+
+```bash
 npm run build
-Preview the production build locally:
+```
 
-Bash
+The compiled files will be created in the `dist/` directory.
+
+To preview the production build locally:
+
+```bash
 npm run preview
-5. Project Structure
-Code
+```
+
+---
+
+## Project Structure
+
+```text
+masterclass-food-instructors/
 ├── src/
-│   ├── App.vue                 # Main app: instructor carousel + wishlist logic
+│   ├── App.vue
+│   │   └── Main application component containing:
+│   │       - Instructor carousel
+│   │       - Wishlist functionality
+│   │       - Course display logic
+│   │
 │   ├── components/
-│   │   └── HelloWorld.vue      # Displays wishlist count in header
+│   │   └── HelloWorld.vue
+│   │       └── Displays wishlist count in the header
+│   │
 │   ├── assets/
-│   │   └── logo.svg            # MasterClass logo
-│   └── main.js                 # App entry point
+│   │   └── logo.svg
+│   │       └── MasterClass logo asset
+│   │
+│   └── main.js
+│       └── Application entry point
+│
 ├── public/
 ├── index.html
 ├── package.json
 ├── vite.config.js
 └── README.md
+```
 
-7 lines hidden
-Configuration Notes
-All prices are in South African Rand (ZAR) and formatted with en-ZA locale
-To add/edit instructors, update the instructors array in src/App.vue
-Images are currently loaded from external URLs. Replace img fields with local paths if needed
-Wishlist state is stored in memory only - it resets on page refresh
-Tech Stack
-Vue 3 - Composition API with <script setup>
-Vite - Build tool and dev server
-CSS3 - Scoped styles, animations, responsive layout
+---
+
+## Configuration Notes
+
+### Currency Formatting
+
+All course prices are displayed in **South African Rand (ZAR)** using:
+
+```javascript
+new Intl.NumberFormat("en-ZA", {
+  style: "currency",
+  currency: "ZAR",
+})
+```
+
+### Managing Instructors
+
+To add, edit, or remove instructors, update the `instructors` array located in:
+
+```text
+src/App.vue
+```
+
+### Image Sources
+
+Instructor images are currently loaded from external URLs. To use local images:
+
+1. Add image files to the `src/assets/` directory.
+2. Import them into `App.vue`.
+3. Replace the corresponding `img` property values.
+
+### Wishlist Storage
+
+Wishlist data is currently stored in application memory only and will reset whenever the page is refreshed.
+
+---
+
+## Tech Stack
+
+### Frontend Framework
+
+* Vue 3
+* Composition API
+* `<script setup>` syntax
+
+### Build Tooling
+
+* Vite
+
+### Styling
+
+* CSS3
+* Scoped component styles
+* Responsive design techniques
+* Custom animations and hover effects
+
+---
+
+## Future Improvements
+
+Potential enhancements for future versions include:
+
+* Persisting wishlist data using Local Storage
+* Course search and filtering functionality
+* Instructor detail pages
+* Backend integration for dynamic content
+* User authentication and profiles
+* Dark mode support
+
+---
+
+## License
+
+This project is intended for educational and portfolio purposes. Modify and distribute according to your project's licensing requirements.
