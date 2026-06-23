@@ -195,5 +195,5 @@ Potential enhancements for future versions include:
 ## License
 
 This project is intended for educational and portfolio purposes. Modify and distribute according to your project's licensing requirements.
-![Uploading Screenshot 2026-06-23 120817.png…]()
+"Screenshots\Screenshot 2026-06-23 120817.png"
 
